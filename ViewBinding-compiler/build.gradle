@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':ViewBinding-annnotation')
+    implementation 'com.squareup:javapoet:1.10.0'
+
+    //在Gradle 5.0将忽略compile classpath中的annotation processor，需要手动添加到annotation processor path
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
