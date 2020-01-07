@@ -1,0 +1,2 @@
+include ':app', ':ViewBinding-annnotation', ':ViewBinding-compiler', ':viewbinding'
+rootProject.name='APTDemo'
